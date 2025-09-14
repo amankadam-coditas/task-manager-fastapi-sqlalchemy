@@ -1,19 +1,23 @@
-[tool.poetry]
-name = "task-manager-fastapi-sqlalchemy"
+[project]
+name = "task-manager"
 version = "0.1.0"
-description = "A FastAPI Task Manager using SQLAlchemy and SQLite"
-authors = ["amankadam-coditas"]
+description = ""
+authors = [
+    {name = "AmanKadam-16",email = "aman16112002kadam@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.116.1,<0.117.0)",
+    "uvicorn (>=0.35.0,<0.36.0)",
+    "sqlalchemy (>=2.0.43,<3.0.0)",
+    "pydantic (>=2.11.7,<3.0.0)"
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-fastapi = "^0.110.0"
-uvicorn = "^0.29.0"
-sqlalchemy = "^2.0.0"
-pydantic = "^2.0.0"
+[tool.poetry]
+packages = [{include = "task_manager", from = "src"}]
 
-[tool.poetry.dev-dependencies]
-pytest = "^8.0.0"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
